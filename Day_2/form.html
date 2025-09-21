@@ -7,31 +7,34 @@
   </head>
   <body>
     <div style="width: 20%; background: lightgrey; margin: 0 auto">
-      <fieldset>
-        <legend>Thông Tin Tài Khoản</legend>
-        <label>Họ và tên</label>
-        <input type="text" name="Name" id="Name" /><br /><br />
-        <label>Hòm Thư</label>
-        <input type="email" /><br /><br />
-        <label>Mật Khẩu</label>
-        <input type="password" /><br /><br />
-        <label>Xác nhận Mật Khẩu</label>
-        <input type="password" /><br /><br />
+      <form>
+        <fieldset>
+          <legend>Thông Tin Tài Khoản</legend>
+          <label>Họ và tên</label>
+          <input type="text" name="Name" id="Name" /><br /><br />
+          <label>Hòm Thư</label>
+          <input type="email" /><br /><br />
+          <label>Mật Khẩu</label>
+          <input type="password" /><br /><br />
+          <label>Xác nhận Mật Khẩu</label>
+          <input type="password" /><br /><br />
       </fieldset><br> 
-      <fieldset>
-        <legend>Thông Tin Cá Nhân</legend>
-        <label>Giới Tính:</label>
-        <input type="radio" name="gender" /><span>Nam</span>
-        <input type="radio" name="gender" /><span>Nữ</span>
-        <input type="radio" name="gender" /><span>Khác</span><br /><br />
-        <label>Sở Thích:</label>
-        <input type="checkbox" name="hobby" /><span>Thể Thao</span>
-        <input type="checkbox" name="hobby" /><span>Âm nhạc</span>
-        <input type="checkbox" name="hobby" /><span>Du lịch</span><br /><br />
-        <label>Ngày Sinh:</label>
-        <input type="date" /><br /><br />
-        <label>Quốc Gia:</label>
-        <select name="nation" id="nation">
+      </form>
+      <form>
+       <fieldset>
+          <legend>Thông Tin Cá Nhân</legend>
+          <label>Giới Tính:</label>
+          <input type="radio" name="gender" /><span>Nam</span>
+          <input type="radio" name="gender" /><span>Nữ</span>
+          <input type="radio" name="gender" /><span>Khác</span><br /><br />
+          <label>Sở Thích:</label>
+          <input type="checkbox" name="hobby" /><span>Thể Thao</span>
+          <input type="checkbox" name="hobby" /><span>Âm nhạc</span>
+          <input type="checkbox" name="hobby" /><span>Du lịch</span><br /><br />
+          <label>Ngày Sinh:</label>
+          <input type="date" /><br /><br />
+          <label>Quốc Gia:</label>
+          <select name="nation" id="nation">
           <option value="vn">Việt Nam</option>
           <option value="arg">Argentina</option>
           <option value="chn">China</option>
@@ -47,7 +50,8 @@
              <button type="submit">Gửi</button>
                 <button type="reset">Hủy</button>
         </div>
-      </fieldset>
+      </fieldset>     
+      </form>
     </div>
   </body>
 </html>
