@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+.header .container{
+    width:100%;
+    height: 100%;
+    background: url("../images/landing-background.jpg") no-repeat 0;
+    background-size:cover;
+    position:fixed;
+    top:0;
+    left:0;
+    font-family: Rajdhani, sans-serif;
+}
+.header .container .box-left{
+    width: 584px;
+    height: 470px;
+    color: white;
+    display: flex;
+    flex-direction:column;
+    position: absolute;
+    top:20%;
+    left:12%;
+ 
+}
+.header .container .box-left .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.header .container .box-left .logo .logo-1{
+    fill:#fff;
+    width: 28px;
+    height: 40px;
+}
+.header .container .box-left h1, h2, p{
+    text-align: center;
+    font-family: "Titillium Web", sans-serif;
+}
+.header .container .box-left h2{
+    font-weight: 500;  
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    margin-top: 36px;
+
+}
+.header .container .box-left h1{
+    text-transform: uppercase;
+    font-size: 10.4rem;
+    font-weight: 900; 
+    letter-spacing: -1rem;
+    margin-bottom: 30px;
+    padding: 0;
+}
+.header .container .box-left .paragraph {
+    font-size: 23px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    margin-bottom: 90px;
+
+}
+.header .container .box-left .button{
+    border: 1px solid #fff;
+    width: 360px;
+    height: 54px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:10px;
+    margin-inline: auto;
+    position: absolute;
+    bottom: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-left:100px;
+    color: #fff;
+    overflow:hidden;
+    transition: width 0.3s;
+}
+.header .container .box-left .button .btn-login a{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    color: #333;
+    text-decoration: none;
+}
+.header .container .box-left .button .btn-register{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    position:absolute;
+    right:0;
+    top: 0;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    transition: 0.3s ease;
+    color: #333;
+    background: #fff;
+}
+/*end .box-left*/
+.header .container .box-right{
+    background: #fff;
+    height: 50%;
+    width: 484px;
+    height:700px;
+    position: absolute;
+    top: 20%;
+    right:15%;
+    border-radius: 20px;
+    padding: 84px;
+}
+.header .container .box-right .box-form-reg{
+    padding: 20px;
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: absolute;
+    inset: 0;
+}
+.header .container .box-right .box-form-reg .logo-rocket img{
+    background-size: cover;
+    position: absolute;
+    top: -69px;
+    left: -120px; 
+}
+.header .container .box-right .box-form-reg h3{
+    font-size: 26px;
+    color:#3E3F5E;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 50px;
+}
+.header .container .box-right .box-form-reg form{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.header .container .box-right .box-form-reg form input {
+    width: 100%;
+    padding: 18px 10px;
+    font-size: 16px;
+    border: 1px solid #dedeea;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.5s ease-in-out;
+}
+.header .container .box-right .box-form-reg form label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: #777;
+    background: #fff;
+    padding: 5px;
+    transition: 0.5s ease;
+}
+
+.header .container .box-right .box-form-reg form input:focus + label{
+    top: -3px;
+    left: 8px;
+}
+.header.container .box-right .box-form-reg form input:focus {
+  border-color: rgb(63, 77, 210);
+}
+.header .container .box-right .ticky{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+}
+.header .container .box-right .ticky .check-box {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.check-box::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid green;
+    border-radius: 4px; 
+    margin-right: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.check-box::after {
+    content: "✖";
+    font-size: 15px;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 4px; 
+
+}
+#box:checked + .check-box::after {
+    opacity: 1;
+    background:rgb(42, 101, 203);
+}
+.header .container .box-right .ticky .check-box:hover{
+    color: rgb(40, 78, 200);
+}
+.header .container .box-right .res-now{
+    width: 100%;
+    background: rgb(33, 69, 216);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 54px;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+
+}
+.header .container .box-right .res-now:hover{
+    background: blue;
+}
+.header .container .box-right .box-form-reg .paragraph-3{
+    position: relative;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-top: 30px;
+    width: 100%;
+
+}
+.header .container .box-right .box-form-reg .paragraph-3 .contact{
+    color:rgb(58, 233, 239);
+    font-weight: 600;
+}
+
+

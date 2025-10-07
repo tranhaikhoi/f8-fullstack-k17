@@ -1,0 +1,11 @@
+@media screen and (max-width: 1500px) {
+  
+    .header .container .box-left {
+        left: 8%; 
+    }
+
+    .header .container .box-right {
+        right: 8%; 
+    }
+}
+
