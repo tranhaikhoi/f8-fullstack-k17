@@ -84,7 +84,7 @@ p {
   overflow: hidden;
   transition: width 0.3s;
 }
-.header .container .box-left .button .btn-login {
+.header .container .box-left .button .btn-login a {
   width: 50%;
   height: 100%;
   text-align: center;
@@ -95,9 +95,9 @@ p {
   justify-content: center;
   align-items: center;
   color: #333;
-  background: #fff;
+  text-decoration: none;
 }
-.header .container .box-left .button .btn-register a {
+.header .container .box-left .button .btn-register {
   width: 50%;
   height: 100%;
   text-align: center;
@@ -109,21 +109,22 @@ p {
   align-items: center;
   transition: 0.3s ease;
   color: #333;
-  text-decoration: none;
+  background: #fff;
 }
 /*end .box-left*/
 .header .container .box-right {
   background: #fff;
   height: 50%;
-  width: 500px;
-  height: 650px;
+  width: 484px;
+  height: 700px;
   position: absolute;
   top: 20%;
   right: 15%;
   border-radius: 20px;
+  padding: 84px;
 }
-.header .container .box-right .box-form-log {
-  padding: 40px;
+.header .container .box-right .box-form-reg {
+  padding: 20px;
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -131,26 +132,27 @@ p {
   position: absolute;
   inset: 0;
 }
-.header .container .box-right .box-form-log .logo-rocket img {
+.header .container .box-right .box-form-reg .logo-rocket img {
   background-size: cover;
   position: absolute;
   top: -69px;
   left: -120px;
 }
-.header .container .box-right .box-form-log h3 {
+.header .container .box-right .box-form-reg h3 {
   font-size: 26px;
   color: #3e3f5e;
   width: 100%;
   text-align: center;
   margin-bottom: 80px;
+  margin-top: 50px;
 }
-.header .container .box-right .box-form-log form {
+.header .container .box-right .box-form-reg form {
   position: relative;
   width: 100%;
   margin-bottom: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.header .container .box-right .box-form-log form input {
+.header .container .box-right .box-form-reg form input {
   width: 100%;
   padding: 18px 10px;
   font-size: 16px;
@@ -159,7 +161,7 @@ p {
   outline: none;
   transition: border-color 0.5s ease-in-out;
 }
-.header .container .box-right .box-form-log form label {
+.header .container .box-right .box-form-reg form label {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -171,11 +173,11 @@ p {
   transition: 0.5s ease;
 }
 
-.header .container .box-right .box-form-log form input:focus + label {
+.header .container .box-right .box-form-reg form input:focus + label {
   top: -3px;
   left: 8px;
 }
-.header.container .box-right .box-form-log form input:focus {
+.header.container .box-right .box-form-reg form input:focus {
   border-color: rgb(63, 77, 210);
 }
 .header .container .box-right .ticky {
@@ -183,20 +185,6 @@ p {
   display: flex;
   gap: 20px;
   align-items: center;
-  justify-content: space-between;
-}
-.header .container .box-right .ticky .tick-2 {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  font-size: 16px;
-  color: #333;
-  position: relative;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-.header .container .box-right .ticky .tick-2:hover {
-  color: rgb(19, 54, 123);
 }
 .header .container .box-right .ticky .check-box {
   display: inline-flex;
@@ -212,7 +200,7 @@ p {
   content: "";
   width: 20px;
   height: 20px;
-  border: 2px solid rgb(18, 49, 89);
+  border: 2px solid green;
   border-radius: 4px;
   margin-right: 10px;
   display: inline-block;
@@ -236,14 +224,14 @@ p {
 }
 #box:checked + .check-box::after {
   opacity: 1;
-  background: rgb(38, 105, 239);
+  background: rgb(42, 101, 203);
 }
 .header .container .box-right .ticky .check-box:hover {
-  color: rgb(19, 49, 137);
+  color: rgb(40, 78, 200);
 }
-.header .container .box-right .log-now {
+.header .container .box-right .res-now {
   width: 100%;
-  background: rgb(53, 48, 219);
+  background: rgb(33, 69, 216);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -252,63 +240,18 @@ p {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 700;
-  margin-top: 30px;
 }
-.header .container .box-right .log-now:hover {
+.header .container .box-right .res-now:hover {
   background: blue;
 }
-.header .container .box-right .line-text {
-  width: 100%;
-  text-align: center;
-  border-bottom: 1px solid #ccc;
-  line-height: 0.1em;
-  margin: 20px 0;
+.header .container .box-right .box-form-reg .paragraph-3 {
+  position: relative;
+  font-weight: 500;
   font-size: 1.4rem;
-  margin-top: 40px;
-}
-.header .container .box-right .line-text span {
-  background: #fff;
-  padding: 0 10px;
-  font-size: 1.6rem;
-}
-.header .container .box-right .links {
   margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
 }
-.header .container .box-right .links .app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  margin-right: 15px;
-  color: #fff;
-  font-size: 1.6rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.header .container .box-right .links .fa-square-youtube {
-  margin-right: 0;
-}
-.header .container .box-right .links .app:hover {
-  transform: translateY(-10px);
-}
-
-.header .container .box-right .links .fa-square-facebook {
-  background: #4568c0;
-}
-
-.header .container .box-right .links .fa-square-twitter {
-  background: #42b6e8;
-}
-
-.header .container .box-right .links .fa-twitch {
-  background: #6e52eb;
-}
-
-.header .container .box-right .links .fa-square-youtube {
-  background: #a5333a;
+.box-form-reg .paragraph-3 .contact {
+  color: rgb(58, 233, 239);
+  font-weight: 600;
 }

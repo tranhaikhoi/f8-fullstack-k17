@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive-login.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -13,9 +11,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/login.css" />
   </head>
   <body>
-    <header class="header">
+    <div class="wrapper">
       <div class="container">
         <div class="box-left">
           <div class="logo">
@@ -27,48 +27,56 @@
               ></path>
             </svg>
           </div>
-          <div class="heading">
+          <div class="heading-info-title">
             <h2>Welcome to</h2>
             <h1>vikinger</h1>
           </div>
-          <div class="paragraph">
+          <div class="heading-info-text">
             <p>
               The next generation social network & community! <br />Connect with
               your friends and play with our quests and badges gamification
               system!
             </p>
           </div>
-          <div class="button">
+          <div class="btn-slide">
             <label class="btn-login" for="login">Login</label>
-            <label class="btn-register" for="register"
-              ><a href="register.html" target="_blank">Register</a></label
-            >
+            <label class="btn-register" for="register">Register</label>
           </div>
         </div>
         <div class="box-right">
-          <div class="box-form-log">
+          <!-- <div class="box-form-log">
             <div class="logo-rocket">
               <img src="./images/rocket.jpg" alt="logo tên lửa" />
             </div>
             <h3>Account Login</h3>
-            <form>
-              <input type="text" id="username" placeholder="" />
-              <label for="username">Username or Email</label>
-            </form>
-            <form>
-              <input type="password" id="password" placeholder="" />
-              <label for="password">Password</label>
-            </form>
-            <div class="ticky">
-              <div class="tick-1">
-                <input type="checkbox" name="box" id="box" hidden />
-                <label class="check-box" for="box"> Remember me </label>
+            <form class="form">
+              <div class="input-group">
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder=""
+                />
+                <label for="username">Username or Email</label>
               </div>
-              <div class="tick-2">Forgot Password?</div>
-            </div>
-            <div class="log-now">
-              <span>Login to your account</span>
-            </div>
+              <div class="input-group">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder=""
+                />
+                <label for="password">Password</label>
+              </div>
+              <div class="ticky">
+                <div class="ticky-1">
+                  <input type="checkbox" name="remember" id="remember" hidden />
+                  <label class="check-box" for="remember">Remember me</label>
+                  <div class="ticky-2">Forgot Password?</div>
+                </div>
+              </div>
+              <button class="log-now">Login to your account</button>
+            </form>
             <div class="line-text">
               <span>Login with your Social Account</span>
             </div>
@@ -78,9 +86,47 @@
               <a href="#"><i class="app fa-brands fa-twitch"></i></a>
               <a href="#"><i class="app fa-brands fa-square-youtube"></i></a>
             </div>
+          </div> -->
+        </div>
+        <div class="box-right-reg">
+          <div class="box-form-reg">
+            <div class="logo-rocket">
+              <img src="./images/rocket.jpg" alt="logo tên lửa" />
+            </div>
+            <h3>Create your Account!</h3>
+            <form>
+              <div class="input-group">
+                <input type="text" id="youremail" placeholder="" />
+                <label for="youremail">Your Email</label>
+              </div>
+              <div class="input-group">
+                <input type="text" id="username" placeholder="" />
+                <label for="username">Username</label>
+              </div>
+              <div class="input-group">
+                <input type="password" id="password" placeholder="" />
+                <label for="password">Password</label>
+              </div>
+              <div class="input-group">
+                <input type="password" id="reset-pas" placeholder="" />
+                <label for="reset-pas">Repeat Password</label>
+              </div>
+              <div class="ticky-3">
+                <input type="checkbox" name="box" id="box" hidden />
+                <label class="check-box" for="box">
+                  Send me news and updates via email
+                </label>
+              </div>
+              <div class="res-now"><span>Register Now!</span></div>
+            </form>
+            <div class="paragraph-3">
+              You'll receive a confirmation email in your inbox with a link to
+              activate your account. If you have any problems,
+              <span class="contact">contact us</span>!
+            </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
   </body>
 </html>

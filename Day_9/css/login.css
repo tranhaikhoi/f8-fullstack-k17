@@ -7,159 +7,165 @@
 html {
   font-size: 10px;
 }
-.header .container {
-  width: 100%;
-  height: 100%;
+.wrapper {
+  width: 100vw;
+  height: 100vh;
   background: url("../images/landing-background.jpg") no-repeat 0;
   background-size: cover;
   position: fixed;
   top: 0;
   left: 0;
-  font-family: Rajdhani, sans-serif;
+  font-family: "Rajdhani", sans-serif;
 }
-.header .container .box-left {
-  width: 584px;
-  height: 470px;
-  color: white;
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 150px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.box-left {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 20%;
-  left: 12%;
-}
-.header .container .box-left .logo {
-  display: flex;
-  justify-content: center;
   align-items: center;
-}
-.header .container .box-left .logo .logo-1 {
-  fill: #fff;
-  width: 28px;
-  height: 40px;
-}
-.header .container .box-left h1,
-h2,
-p {
+  flex: 1;
+  color: #fff;
   text-align: center;
-  font-family: "Titillium Web", sans-serif;
 }
-.header .container .box-left h2 {
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  margin-top: 36px;
-}
-.header .container .box-left h1 {
-  text-transform: uppercase;
-  font-size: 10.4rem;
-  font-weight: 900;
-  letter-spacing: -1rem;
-  margin-bottom: 30px;
-  padding: 0;
-}
-.header .container .box-left .paragraph {
-  font-size: 23px;
+.box-left .logo > path {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  line-height: 1.5;
-  margin-bottom: 90px;
 }
-.header .container .box-left .button {
+.box-left .logo .logo-1 {
+  width: auto;
+  height: 100%;
+  display: block;
+  width: 28px;
+  height: 40px;
+  fill: #fff;
+}
+.heading-info-title {
+  margin-top: 36px;
+}
+.heading-info-title h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.heading-info-title h1 {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 6.5rem;
+  font-weight: 900;
+  line-height: 6.5rem;
+  text-transform: uppercase;
+}
+.heading-info-text {
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-inline: 100px;
+  margin-top: 30px;
+  line-height: 2.4rem;
+}
+.box-left .btn-slide {
+  display: flex;
   border: 1px solid #fff;
-  width: 360px;
+  width: 65%;
   height: 54px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  margin-inline: auto;
-  position: absolute;
-  bottom: 0;
   font-size: 1.6rem;
   font-weight: 700;
-  margin-left: 100px;
   color: #fff;
-  overflow: hidden;
-  transition: width 0.3s;
+  margin-top: 90px;
+  user-select: none;
 }
-.header .container .box-left .button .btn-login {
+.btn-login {
   width: 50%;
   height: 100%;
   text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #333;
   background: #fff;
+  flex: 1;
 }
-.header .container .box-left .button .btn-register a {
+.btn-register {
   width: 50%;
   height: 100%;
   text-align: center;
-  position: absolute;
-  right: 0;
-  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.3s ease;
   color: #333;
   text-decoration: none;
+  flex: 1;
 }
-/*end .box-left*/
-.header .container .box-right {
-  background: #fff;
-  height: 50%;
-  width: 500px;
-  height: 650px;
-  position: absolute;
-  top: 20%;
-  right: 15%;
-  border-radius: 20px;
-}
-.header .container .box-right .box-form-log {
-  padding: 40px;
-  width: 400px;
+/* 
+.box-right {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  position: absolute;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: #fff;
+  position: relative;
   inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
 }
-.header .container .box-right .box-form-log .logo-rocket img {
+.box-form-log .logo-rocket img {
   background-size: cover;
   position: absolute;
   top: -69px;
   left: -120px;
 }
-.header .container .box-right .box-form-log h3 {
-  font-size: 26px;
+.box-form-log {
+  display: flex;
+  flex-direction: column;
+  padding: 64px;
+  width: 100%;
+  height: 100%;
+}
+.box-form-log h3 {
+  font-size: 2.6rem;
   color: #3e3f5e;
   width: 100%;
   text-align: center;
-  margin-bottom: 80px;
 }
-.header .container .box-right .box-form-log form {
+.box-form-log .form {
+  margin-top: 76px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.box-form-log .form .input-group {
   position: relative;
   width: 100%;
   margin-bottom: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.header .container .box-right .box-form-log form input {
+.box-form-log .form .input-group input {
   width: 100%;
   padding: 18px 10px;
-  font-size: 16px;
+  font-size: 1.6rem;
   border: 1px solid #dedeea;
   border-radius: 6px;
   outline: none;
   transition: border-color 0.5s ease-in-out;
 }
-.header .container .box-right .box-form-log form label {
+.input-group label {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -170,22 +176,24 @@ p {
   padding: 5px;
   transition: 0.5s ease;
 }
-
-.header .container .box-right .box-form-log form input:focus + label {
+.box-form-log form input:focus + label {
   top: -3px;
   left: 8px;
 }
-.header.container .box-right .box-form-log form input:focus {
+.box-right .box-form-log .form input:focus {
   border-color: rgb(63, 77, 210);
 }
-.header .container .box-right .ticky {
+.ticky {
   width: 100%;
+  margin-top: 28px;
+}
+.ticky .ticky-1 {
   display: flex;
-  gap: 20px;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
-.header .container .box-right .ticky .tick-2 {
+.box-right .ticky .check-box {
   display: inline-flex;
   align-items: center;
   cursor: pointer;
@@ -193,20 +201,6 @@ p {
   color: #333;
   position: relative;
   font-weight: 700;
-  margin-bottom: 10px;
-}
-.header .container .box-right .ticky .tick-2:hover {
-  color: rgb(19, 54, 123);
-}
-.header .container .box-right .ticky .check-box {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  font-size: 16px;
-  color: #333;
-  position: relative;
-  font-weight: 700;
-  margin-bottom: 10px;
 }
 .check-box::before {
   content: "";
@@ -222,7 +216,7 @@ p {
 }
 .check-box::after {
   content: "✖";
-  font-size: 15px;
+  font-size: 1.5rem;
   color: #fff;
   position: absolute;
   left: 0;
@@ -233,15 +227,27 @@ p {
   height: 20px;
   text-align: center;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#box:checked + .check-box::after {
+#remember:checked + .check-box::after {
   opacity: 1;
   background: rgb(38, 105, 239);
 }
-.header .container .box-right .ticky .check-box:hover {
+.ticky .check-box:hover {
   color: rgb(19, 49, 137);
 }
-.header .container .box-right .log-now {
+.ticky .ticky-2 {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  position: relative;
+  font-weight: 700;
+}
+.log-now {
   width: 100%;
   background: rgb(53, 48, 219);
   display: flex;
@@ -254,10 +260,10 @@ p {
   font-weight: 700;
   margin-top: 30px;
 }
-.header .container .box-right .log-now:hover {
+.log-now:hover {
   background: blue;
 }
-.header .container .box-right .line-text {
+.line-text {
   width: 100%;
   text-align: center;
   border-bottom: 1px solid #ccc;
@@ -266,18 +272,18 @@ p {
   font-size: 1.4rem;
   margin-top: 40px;
 }
-.header .container .box-right .line-text span {
+.line-text span {
   background: #fff;
   padding: 0 10px;
   font-size: 1.6rem;
 }
-.header .container .box-right .links {
+.links {
   margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.header .container .box-right .links .app {
+.links .app {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -290,25 +296,84 @@ p {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.header .container .box-right .links .fa-square-youtube {
+.links .fa-square-youtube {
   margin-right: 0;
 }
-.header .container .box-right .links .app:hover {
+.links .app:hover {
   transform: translateY(-10px);
 }
 
-.header .container .box-right .links .fa-square-facebook {
+.links .fa-square-facebook {
   background: #4568c0;
 }
 
-.header .container .box-right .links .fa-square-twitter {
+.links .fa-square-twitter {
   background: #42b6e8;
 }
-
-.header .container .box-right .links .fa-twitch {
+.links .fa-twitch {
   background: #6e52eb;
 }
-
-.header .container .box-right .links .fa-square-youtube {
+.box-right .links .fa-square-youtube {
   background: #a5333a;
+} */
+.box-right-reg {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: #fff;
+  position: relative;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.box-form-reg .logo-rocket img {
+  background-size: cover;
+  position: absolute;
+  top: -69px;
+  left: -120px;
+}
+.box-form-log {
+  display: flex;
+  flex-direction: column;
+  padding: 64px;
+  width: 100%;
+  height: 100%;
+}
+.box-form-reg h3 {
+  font-size: 26px;
+  color: #3e3f5e;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 50px;
+}
+.box-form-reg form {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.box-form-reg form input {
+  width: 100%;
+  padding: 18px 10px;
+  font-size: 16px;
+  border: 1px solid #dedeea;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.5s ease-in-out;
+}
+.box-form-reg form label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: #777;
+  background: #fff;
+  padding: 5px;
+  transition: 0.5s ease;
 }
