@@ -5,17 +5,6 @@ function isTriangle(a, b, c) {
   if (a + b <= c || b + c <= a || c + a <= b) {
     return false;
   }
-  if (a === b && b === c) {
-    return "tam giác đều";
-  }
-  if (a * a + b * b === c * c || 
-      b * b + c * c === a * a || 
-      a * a + c * c === b * b) {
-    return "tam giác vuông";
-  }
-  if (a===b ||  b===c|| c===a){
-     return "tam giác cân";
-  } 
   return true;
 }
 
