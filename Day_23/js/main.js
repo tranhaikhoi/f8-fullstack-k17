@@ -178,7 +178,7 @@ passwordEl.addEventListener("input", () => {
   }
 });
 
-// Confirm password realtime
+// Password Confirmation realtime
 passwordConfirEl.addEventListener("input", () => {
   if (!passwordConfirEl.value.trim()) {
     passwordConFirErrorText.className = "text-red-600";
