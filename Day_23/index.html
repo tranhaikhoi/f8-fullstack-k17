@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div
+      class="wrapper bg-purple-800 w-screen h-screen flex justify-center items-center"
+    >
+      <form
+        id="formResgister"
+        class="w-[450px] px-[30px] py-[60px] mx-auto bg-white flex flex-col rounded-md gap-7"
+      >
+        <h2 class="text-2xl font-bold">Create a new account</h2>
+        <div class="username flex flex-col relative">
+          <label for="userName" class="font-bold">Username</label>
+          <input
+            id="userName"
+            type="text"
+            placeholder="webcrunch"
+            class="border border-gray-400 focus:outline-none focus:ring-0 focus:border-gray-400 px-3 py-2 rounded-md"
+          />
+          <span class="hidden" id="userNameCheck">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="w-[20px] h-[20px] absolute right-2 top-1/2 translate-y-1/2"
+            >
+              <!-- Vòng tròn xanh -->
+              <circle cx="256" cy="256" r="256" fill="#34A853" />
+              <!-- Dấu check trắng -->
+              <path
+                d="M362.7 169.6c-8.4-6.7-20.5-5.3-27.2 3.1L233.7 303.4l-56.2-56.2c-7.8-7.8-20.5-7.8-28.3 0s-7.8 20.5 0 28.3l71.8 71.8c7.8 7.8 20.5 7.8 28.3 0L383 197c6.7-8.4 5.3-20.5-3.1-27.4z"
+                fill="#ffffff"
+              />
+            </svg>
+          </span>
+          <span class="hidden" id="userNameErrorIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="w-[20px] h-[20px] absolute right-2 top-1/2 -translate-y-1/2"
+            >
+              <!-- Nền tròn đỏ -->
+              <circle cx="256" cy="256" r="256" fill="#E02424" />
+              <!-- Dấu chấm than trắng -->
+              <path
+                fill="#ffffff"
+                d="M256 336c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zm0-224c-18.2 0-32.6 15.5-31.3 33.7l7.4 104c.9 12.6 11.4 22.3 24 22.3s23.1-9.7 24-22.3l7.4-104C288.6 127.5 274.2 112 256 112z"
+              />
+            </svg>
+          </span>
+          <h3 class="hidden text-red-600" id="userNameErrorText">
+            Username cannot be blank
+          </h3>
+        </div>
+        <div class="email flex flex-col relative">
+          <label for="email" class="font-bold">Email</label>
+          <input
+            type="text"
+            placeholder="andy@web-crunch.com"
+            id="email"
+            class="border border-gray-400 focus:outline-none focus:ring-0 focus:border-gray-400 px-3 py-2 rounded-md"
+          />
+          <h3 class="hidden text-red-600" id="emailErrorText">
+            Please enter valid email address
+          </h3>
+          <span class="hidden" id="emailCheck">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="w-[20px] h-[20px] absolute right-2 top-1/2 translate-y-1/2"
+            >
+              <!-- Vòng tròn xanh -->
+              <circle cx="256" cy="256" r="256" fill="#34A853" />
+              <!-- Dấu check trắng -->
+              <path
+                d="M362.7 169.6c-8.4-6.7-20.5-5.3-27.2 3.1L233.7 303.4l-56.2-56.2c-7.8-7.8-20.5-7.8-28.3 0s-7.8 20.5 0 28.3l71.8 71.8c7.8 7.8 20.5 7.8 28.3 0L383 197c6.7-8.4 5.3-20.5-3.1-27.4z"
+                fill="#ffffff"
+              />
+            </svg>
+          </span>
+          <span class="hidden" id="emailErrorIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="w-[20px] h-[20px] absolute right-2 top-1/2 -translate-y-1/2"
+            >
+              <!-- Nền tròn đỏ -->
+              <circle cx="256" cy="256" r="256" fill="#E02424" />
+              <!-- Dấu chấm than trắng -->
+              <path
+                fill="#ffffff"
+                d="M256 336c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zm0-224c-18.2 0-32.6 15.5-31.3 33.7l7.4 104c.9 12.6 11.4 22.3 24 22.3s23.1-9.7 24-22.3l7.4-104C288.6 127.5 274.2 112 256 112z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div class="password flex flex-col relative">
+          <label for="Password" class="font-bold">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="border border-gray-400 focus:outline-none focus:ring-0 focus:border-gray-400 px-3 py-2 rounded-md"
+          />
+          <h3 class="hidden text-red-600" id="passwordErrorText">
+            Password cannot be blank
+          </h3>
+          <span class="hidden" id="passwordCheck">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="w-[20px] h-[20px] absolute right-2 top-1/2 translate-y-1/2"
+            >
+              <!-- Vòng tròn xanh -->
+              <circle cx="256" cy="256" r="256" fill="#34A853" />
+              <!-- Dấu check trắng -->
+              <path
+                d="M362.7 169.6c-8.4-6.7-20.5-5.3-27.2 3.1L233.7 303.4l-56.2-56.2c-7.8-7.8-20.5-7.8-28.3 0s-7.8 20.5 0 28.3l71.8 71.8c7.8 7.8 20.5 7.8 28.3 0L383 197c6.7-8.4 5.3-20.5-3.1-27.4z"
+                fill="#ffffff"
+              />
+            </svg>
+          </span>
+          <span class="hidden" id="passwordErrorIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="w-[20px] h-[20px] absolute right-2 top-1/2 -translate-y-1/2"
+            >
+              <!-- Nền tròn đỏ -->
+              <circle cx="256" cy="256" r="256" fill="#E02424" />
+              <!-- Dấu chấm than trắng -->
+              <path
+                fill="#ffffff"
+                d="M256 336c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zm0-224c-18.2 0-32.6 15.5-31.3 33.7l7.4 104c.9 12.6 11.4 22.3 24 22.3s23.1-9.7 24-22.3l7.4-104C288.6 127.5 274.2 112 256 112z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div class="pas-confir flex flex-col relative">
+          <label for="passwordConfir" class="font-bold"
+            >Password Confirmation</label
+          >
+          <input
+            type="password"
+            id="passwordConfir"
+            class="border border-gray-400 focus:outline-none focus:ring-0 focus:border-gray-400 px-3 py-2 rounded-md"
+          />
+          <h3 class="hidden text-red-600" id="passwordConFirErrorText">
+            Password confirmation required
+          </h3>
+          <h3 class="hidden" id="passwordConFirErrorNext">
+            Password does not match
+          </h3>
+
+          <span class="hidden" id="passwordConfirCheck">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="w-[20px] h-[20px] absolute right-2 top-1/2 translate-y-1/2"
+            >
+              <!-- Vòng tròn xanh -->
+              <circle cx="256" cy="256" r="256" fill="#34A853" />
+              <!-- Dấu check trắng -->
+              <path
+                d="M362.7 169.6c-8.4-6.7-20.5-5.3-27.2 3.1L233.7 303.4l-56.2-56.2c-7.8-7.8-20.5-7.8-28.3 0s-7.8 20.5 0 28.3l71.8 71.8c7.8 7.8 20.5 7.8 28.3 0L383 197c6.7-8.4 5.3-20.5-3.1-27.4z"
+                fill="#ffffff"
+              />
+            </svg>
+          </span>
+          <span class="hidden" id="passwordConfirErrorIcon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+              class="w-[20px] h-[20px] absolute right-2 top-1/2 -translate-y-1/2"
+            >
+              <!-- Nền tròn đỏ -->
+              <circle cx="256" cy="256" r="256" fill="#E02424" />
+              <!-- Dấu chấm than trắng -->
+              <path
+                fill="#ffffff"
+                d="M256 336c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zm0-224c-18.2 0-32.6 15.5-31.3 33.7l7.4 104c.9 12.6 11.4 22.3 24 22.3s23.1-9.7 24-22.3l7.4-104C288.6 127.5 274.2 112 256 112z"
+              />
+            </svg>
+          </span>
+        </div>
+        <button
+          type="submit"
+          class="p-3 bg-violet-600 hover:bg-violet-500 text-white font-bold rounded-md cursor-pointer"
+        >
+          Create account
+        </button>
+      </form>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
