@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>To do list</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="wrapper bg-purple-700 w-screen h-screen flex">
+      <div class="container mt-[80px] w-[450px] m-auto p-6 bg-[#1a1a40]">
+        <div class="app mx-auto flex flex-col p-5 gap-6 w-full">
+          <h1 class="text-white font-semibold text-2xl text-center">
+            Get Things Done !
+          </h1>
+          <form action="" class="flex w-full">
+            <input
+              type="text"
+              placeholder="What is the task today?"
+              class="todoInput flex-1 border border-gray-400 focus:outline-none focus:ring-0 focus:border-gray-400 px-3 py-2 text-white"
+            />
+            <button
+              type="submit"
+              class="btn p-3 bg-violet-600 hover:bg-violet-500 text-white font-bold cursor-pointer"
+            >
+              Add task
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
