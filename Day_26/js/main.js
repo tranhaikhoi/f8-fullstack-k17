@@ -57,6 +57,7 @@ items.forEach((item) => {
   deleteItem.addEventListener("click", () => {
     if (currentItem) {
       currentItem.remove();
+      contextMenu.style.display = "none";
     }
   });
   //RENAME
