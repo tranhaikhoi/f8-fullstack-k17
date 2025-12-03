@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Giả lập một tình huống có 3 server API, bạn cần lấy dữ liệu từ server
+      nhanh nhất. <br />
+
+      function fetchFromServer1() { <br />
+      return new Promise((resolve) => <br />
+      setTimeout(() => resolve("Server 1 Response"), 3000) <br />
+      ); <br />
+      } <br />
+      function fetchFromServer2() { <br />
+      return new Promise((resolve) => <br />
+      setTimeout(() => resolve("Server 2 Response"), 2000) <br />
+      ); <br />
+      } <br />
+      function fetchFromServer3() { <br />
+      return new Promise((resolve) => <br />
+      setTimeout(() => resolve("Server 3 Response"), 1000) <br />
+      ); <br />
+      } <br />
+
+      Yêu cầu: Sử dụng Promise.race để lấy kết quả từ server phản hồi nhanh
+      nhất.
+    </p>
+    <script src="js/ex02.js"></script>
+  </body>
+</html>

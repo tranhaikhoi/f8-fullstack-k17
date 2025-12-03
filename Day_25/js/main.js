@@ -2,7 +2,7 @@ const track = document.querySelector(".track");
 const slide = document.querySelectorAll(".slide");
 const btnPrev = document.querySelector(".btn-prev");
 const btnNext = document.querySelector(".btn-next");
-const active = document.querySelector(".active");
+const active = document.querySelectorAll(".active");
 
 // SLIDE HIỆN TẠI
 let currentSlide = 0;
