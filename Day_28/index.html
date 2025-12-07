@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="bg-white">
+    <h1 class="text-center text-3xl font-bold my-6">Blog</h1>
+
+    <div class="max-w-5xl mx-auto">
+      <!-- Search -->
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="Search..."
+        class="border w-full p-2 mb-4 rounded-xl"
+      />
+
+      <!-- Add new -->
+      <div class="mb-3">
+        <button class="border px-4 py-2 rounded-[12px] bg-white">
+          Thêm mới
+        </button>
+      </div>
+
+      <!-- Sort -->
+      <div class="flex items-center gap-3 mb-4">
+        <button
+          id="btnNewest"
+          class="border px-4 py-2 rounded-[12px] bg-yellow-300"
+        >
+          Mới nhất
+        </button>
+
+        <button id="btnOldest" class="border px-4 py-2 rounded-[12px] bg-white">
+          Cũ nhất
+        </button>
+      </div>
+
+      <!-- List posts -->
+      <div id="postList" class="space-y-6"></div>
+
+      <!-- No result -->
+      <p id="noResult" class="text-center text-gray-500 mt-5 hidden"></p>
+
+      <!-- Pagination -->
+      <div id="pagination" class="flex gap-1 justify-center mt-5"></div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-white/10 backdrop-blur-[2px] hidden items-center justify-center"
+    >
+      <div class="bg-white rounded-2xl max-w-5xl w-[90%] relative p-2">
+        <button
+          id="closeModal"
+          class="absolute right-3 top-2 text-xl text-gray-600"
+        >
+          ×
+        </button>
+        <div id="modalContent" class="p-6 text-gray-800"></div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

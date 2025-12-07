@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      .btn-active {
+        @apply bg-yellow-400;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="max-w-[80%] mx-auto py-3">
+      <h1 class="text-3xl font-bold text-center">Blogs</h1>
+
+      <input
+        type="search"
+        placeholder="Search..."
+        class="js-search border border-gray-300 w-full py-2 px-3 outline-none my-3"
+      />
+      <button
+        class="js-add-btn cursor-pointer border border-gray-300 py-2 px-5 hover:bg-green-600"
+      >
+        Thêm mới
+      </button>
+
+      <div class="js-sort flex gap-3 mt-3">
+        <button
+          data-sort="desc"
+          class="btn-active cursor-pointer border border-gray-300 py-2 px-5"
+        >
+          Mới nhất
+        </button>
+        <button
+          data-sort="asc"
+          class="cursor-pointer border border-gray-300 py-2 px-5"
+        >
+          Cũ nhất
+        </button>
+      </div>
+
+      <div class="js-loading"></div>
+      <div class="js-post-list"></div>
+      <div class="js-paginate"></div>
+
+      <!-- Modal thêm / sửa -->
+      <div
+        class="fixed inset-0 bg-black/40 hidden flex items-center justify-center js-modal"
+      >
+        <div class="bg-white w-[60%] p-5 rounded shadow relative">
+          <h2 class="text-2xl font-bold mb-3 js-modal-title">Thêm bài viết</h2>
+
+          <input
+            type="text"
+            class="border border-gray-300 w-full py-2 px-3 mb-3 js-input-title"
+            placeholder="Tiêu đề..."
+          />
+
+          <textarea
+            class="border border-gray-300 w-full py-2 px-3 js-input-body"
+            rows="5"
+            placeholder="Nội dung..."
+          ></textarea>
+
+          <div class="flex justify-end gap-3 mt-4">
+            <button class="py-2 px-5 border js-btn-cancel">Hủy</button>
+            <button class="py-2 px-5 bg-green-600 text-white js-btn-save">
+              Lưu
+            </button>
+          </div>
+          <span
+            class="absolute top-2 right-3 text-2xl cursor-pointer js-modal-close"
+            >×</span
+          >
+        </div>
+      </div>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
